@@ -21,7 +21,7 @@ var Stack = function() {
   //removes the 'topmost' item on the stack and returns it
   someInstance.pop = function() {
     //if numKey is =-1 then return
-    if (numKey === 0-1) {
+    if (numKey === 0 - 1) {
       return;
     }
 
@@ -31,7 +31,7 @@ var Stack = function() {
     delete someInstance[numKey];
     //de-increment numKey by one
     numKey --;
-    //return temp   value
+    //return temp value
     return temp;
   };
   //size just returns how many items are currently in the stack. (numKey+1)
