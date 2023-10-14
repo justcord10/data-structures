@@ -4,6 +4,7 @@ var Tree = function(value) {
   newTree.children = [];
 
   newTree.addChild = treeMethods.addChild;
+  newTree.removeChildren = treeMethods.removeChildren;
   newTree.contains = treeMethods.contains;
   return newTree;
 };
@@ -15,6 +16,10 @@ treeMethods.addChild = function(value) {
   var currentTree = Tree(value);
   // push that new tree onto the this keyword children array
   this.children.push(currentTree);
+};
+
+treeMethods.removeChildren = function() {
+  this.children = [];
 };
 
 treeMethods.contains = function(target) {
