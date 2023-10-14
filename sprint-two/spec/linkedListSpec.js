@@ -51,5 +51,10 @@ describe('linkedList', function() {
     expect(linkedList.contains(4)).to.equal(false);
   });
 
+  it('should designate a new head when the first node is added', function() {
+    linkedList.addToTail(4);
+    expect(linkedList.head.value).to.equal(4);
+  });
+
   // add more tests here to test the functionality of linkedList
 });
