@@ -76,7 +76,7 @@ HashTable.prototype.remove = function(key) {
     return;
   }
   //iterate through bucket
-  for (let i = 0; i <bucket.length; i++) {
+  for (let i = 0; i < bucket.length; i++) {
     //check if tuple key matches input key
     if (bucket[i][0] === key) {
       //splice that tuple out at i
