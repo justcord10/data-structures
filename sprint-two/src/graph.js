@@ -9,7 +9,7 @@ var Graph = function() {
 // Add a node to the graph, passing in the node's value.
 Graph.prototype.addNode = function(value) {
   // instantiate newNode with our value
-  var newNode = new Node(value);
+  var newNode = new GraphNode(value);
   // push onto our graph's node property
   this.nodes.push(newNode);
 };
@@ -117,7 +117,7 @@ Graph.prototype.findNode = function(target) {
 };
 
 // node constructor here
-var Node = function(value) {
+var GraphNode = function(value) {
   this.value = value;
   this.vertices = [];
 };
