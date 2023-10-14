@@ -27,6 +27,18 @@ describe('graph', function() {
     expect(graph.contains(2)).to.equal(false);
   });
 
+  it('should detect edges between two nodes', function() {
+    graph.addNode(2);
+    graph.addNode(1);
+    graph.addNode(3);
+
+    graph.addEdge(2, 1);
+    expect(graph.hasEdge(2, 1)).to.equal(true);
+    expect(graph.hasEdge(9, 10)).to.equal(false);
+    expect(graph.hasEdge(2, 10)).to.equal(false);
+    expect(graph.hasEdge(2, 3)).to.equal(false);
+  });
+
   it('should create edges between two nodes', function() {
     graph.addNode(2);
     graph.addNode(1);
