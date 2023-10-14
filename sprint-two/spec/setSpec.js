@@ -24,4 +24,11 @@ describe('set', function() {
     expect(set.contains('Mel Gibson')).to.equal(false);
   });
 
+  //it should not add a value more than one time to the set.
+  it('should not add a value to the set more than once', function() {
+    set.add('Mel Gibson');
+    set.add('Mel Gibson');
+    expect(set._storage.length).to.equal(1);
+  });
+
 });
