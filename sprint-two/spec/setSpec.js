@@ -28,7 +28,7 @@ describe('set', function() {
   it('should not add a value to the set more than once', function() {
     set.add('Mel Gibson');
     set.add('Mel Gibson');
-    expect(set._storage.length).to.equal(1);
+    expect(Object.keys(set._storage).length).to.equal(1);
   });
 
 });
